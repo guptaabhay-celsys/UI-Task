@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>UI Task</title>
+</head>
+<body>
+    <div class="container">
+    <div class="sidebar">
+        <div class="logo-div">
+            <div><img src="logo.png" alt="No Image Found" class="logo"></div>
+            <div class="logo-text">
+                <h2>Dashboard</h2>
+                <p>Admin</p>
+            </div>
+        </div>
+        <div class="new-project">
+            <p>+</p>
+            <h4 class="create-project">Create Project</h4>
+        </div>
+        <div>
+            <h4 class="sidebar-heading">Menu</h4>
+            <div class="menu-items">
+                <div class="menuItem">
+                    <img src="sidebar-icons/house-fill.svg" alt="" class="menu-icon">
+                    <h5 class="side-text">Home</h5>
+                </div>
+                <div class="menuItem">
+                    <img src="sidebar-icons/chat-left-dots-fill.svg">
+                    <h5 class="side-text">Messages</h5>
+                </div>
+                <div class="menuItem">
+                    <img src="sidebar-icons/window-desktop.svg">
+                    <h5 class="side-text">Documents</h5>
+                </div>
+                <div class="menuItem">
+                    <img src="sidebar-icons/file-earmark-bar-graph-fill.svg" alt="">
+                    <h5 class="side-text">Application</h5>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h4 class="sidebar-heading">Configuration</h4>
+            <div class="configuration-items">
+                <div class="configItem">
+                    <img src="sidebar-icons/house-fill.svg" alt="" class="menu-icon">
+                    <h5 class="side-text">Stack Dev</h5>
+                </div>
+                <div class="configItem">
+                    <img src="sidebar-icons/chat-left-dots-fill.svg" alt="">
+                    <h5 class="side-text">Settings</h5>
+                </div>
+                <div class="configItem">
+                    <img src="sidebar-icons/window-desktop.svg" alt="">
+                    <h5 class="side-text">Light Mode</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="navbar">
+        
+        <div class="nav">
+            <div class="hamburger-icon nav-items">
+                <img src="list.svg" alt="hamburger-icon">
+            </div>
+            <div class="nav-items" id="search">
+                <input type="text" placeholder="Search...">
+                <img src="navbar-icons/search.svg" class="search-icon">
+            </div>
+            <div class="nav-items" id="top-second-icons">
+                <img src="sidebar-icons/house-fill.svg">
+                <img src="sidebar-icons/window-desktop.svg">
+                <img src="sidebar-icons/file-earmark-bar-graph-fill.svg">
+            </div>
+            <div class="nav-items" id="top-third-icons">
+                <div class="notifications-icon">
+                    <img src="sidebar-icons/house-fill.svg" >
+                    <div class="notifications-count">+3</div>
+                </div>
+                <img src="sidebar-icons/window-desktop.svg" id="window">
+                <div class="notifications-icon">
+                    <img src="sidebar-icons/file-earmark-bar-graph-fill.svg">
+                    <div class="notifications-count">+3</div>
+                </div>
+            </div>
+            <div class="nav-items">
+                <div class="profile">
+                    <img src="logo.png" class="profile-pic">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="right-sidebar">
+        <div class="right-sidebar-items">
+            <div class="prod-name">
+                <div>
+                    <span class="star-icon"><img src="star-fill.svg"></span>
+                    <h4 class="p-name">Product Name</h4>
+                </div>
+                <div>
+                    <button class="prod-btn">Details</button>
+                </div>
+            </div>
+            <div class="prod-img">
+                <img src="pic.jfif" class="iphone">
+            </div>
+            <div class="prod-desc">
+                <div class="circle"><h4>A</h4></div>
+                <div class="random-text">
+                    <h6>Lorem, ipsum dolor.</h6>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+        </div>
+        <div class="right-sidebar-items">
+            <div class="prod-name">
+                <div>
+                    <span class="star-icon"><img src="star-fill.svg"></span>
+                    <h4 class="p-name">Product Name</h4>
+                </div>
+                <div>
+                    <button class="prod-btn">Details</button>
+                </div>
+            </div>
+            <div class="prod-img">
+                <img src="pic.jfif" class="iphone">
+            </div>
+            <div class="prod-desc">
+                <div class="circle"><h4>A</h4></div>
+                <div class="random-text">
+                    <h6>Lorem, ipsum dolor.</h6>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+        </div>
+        <div class="right-sidebar-items">
+            <div class="prod-name">
+                <div>
+                    <span class="star-icon"><img src="star-fill.svg"></span>
+                    <h4 class="p-name">Product Name</h4>
+                </div>
+                <div>
+                    <button class="prod-btn">Details</button>
+                </div>
+            </div>
+            <div class="prod-img">
+                <img src="pic.jfif" class="iphone-last">
+            </div>
+        </div>
+    </div>
+
+    <div class="middlebar">
+
+        <div class="middlebar-items">
+            <div class="stats-card">
+                <div class="graph">
+                    <div><img src="sidebar-icons/file-earmark-bar-graph-fill.svg"></div>
+                    <img src="arrow-up-right-circle.svg">
+                    <h6>+16.24</h6>
+                </div>
+                <div class="stats">
+                    <p>Total Sales</p>
+                    <h3>$ 23,090,00</h3>
+                    <p>($1,340 last year)</p>
+                </div>
+            </div>
+            <div class="stats-card">
+                <div class="graph">
+                    <div class="lower-graph"><img src="sidebar-icons/file-earmark-bar-graph-fill.svg"></div>
+                    <img src="arrow-down-right-circle.svg">
+                    <h6 class="down">-5.24%</h6>
+                </div>
+                <div class="stats">
+                    <p>Total Sales</p>
+                    <h3>$ 23,090,00</h3>
+                    <p>($1,340 last year)</p>
+                </div>
+            </div>
+            <div class="stats-card">
+                <div class="graph">
+                    <div><img src="sidebar-icons/file-earmark-bar-graph-fill.svg"></div>
+                    <img src="arrow-up-right-circle.svg">
+                    <h6>+16.24</h6>
+                </div>
+                <div class="stats">
+                    <p>Total Sales</p>
+                    <h3>$ 23,090,00</h3>
+                    <p>($1,340 last year)</p>
+                </div>
+            </div>
+        </div>
+        <div class="middlebar-items">
+            <div class="product-card">
+                <div class="main-container">
+                    <div class="prod-info">
+                        <h3>Data Information</h3>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </div>
+                    <div class="add-prod">
+                        <div class="search-prod">
+                            <input type="text" placeholder="Search here...">
+                            <img src="navbar-icons/search.svg" class="search-icon">
+                        </div>
+                
+                        <div class="dropdown">
+                            <select>
+                                <option value="">Select By Newest</option>
+                            </select>
+                        </div>
+                
+                        <div class="icon-background">
+                            <img src="list-task.svg" class="icon">
+                        </div>
+                
+                        <div>
+                            <button class="add-data">Add New Data</button>
+                        </div>
+                    </div>
+                </div>
+                
+            <div class="prod-cards">
+                <img src="arrow-left-circle.svg" class="side-arrow">
+                <div class="product-card2">
+                    <div class="section-1">
+                        <div class="image-container">
+                            <img src="logo.png" alt="Product Image" class="product-img">
+                        </div>
+                        <div class="dots-container">
+                            <img src="three-dots.svg">
+                        </div>
+                    </div>
+
+                    <div class="section-2">
+                        <button class="availability-btn">Available</button>
+                        <div class="product-info">
+                            <p class="product-name">Product Name</p>
+                            <p class="product-id">ID: 12345</p>
+                        </div>
+                    </div>
+
+                    <div class="section-3">
+                        <div class="rating-reviews">
+                            <span class="rating">★★★★☆</span>
+                            <span class="reviews">100 reviews</span>
+                        </div>
+                        <div class="details-code">
+                            <span class="details">Product Details</span>
+                            <span class="code">G-05</span>
+                        </div>
+                        <div class="random-text">
+                            <span class="left-text">Random1</span>
+                            <span class="right-text">Random2</span>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="product-card2">
+                    <div class="section-1">
+                        <div class="image-container">
+                            <img src="logo.png" alt="Product Image" class="product-img">
+                        </div>
+                        <div class="dots-container">
+                            <img src="three-dots.svg">
+                        </div>
+                    </div>
+
+                    <div class="section-2">
+                        <button class="availability-btn">Available</button>
+                        <div class="product-info">
+                            <p class="product-name">Product Name</p>
+                            <p class="product-id">ID: 12345</p>
+                        </div>
+                    </div>
+
+                    <div class="section-3">
+                        <div class="rating-reviews">
+                            <span class="rating">★★★★☆</span>
+                            <span class="reviews">100 reviews</span>
+                        </div>
+                        <div class="details-code">
+                            <span class="details">Product Details</span>
+                            <span class="code">G-05</span>
+                        </div>
+                        <div class="random-text">
+                            <span class="left-text">Random1</span>
+                            <span class="right-text">Random2</span>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="product-card2">
+                    <div class="section-1">
+                        <div class="image-container">
+                            <img src="logo.png" alt="Product Image" class="product-img">
+                        </div>
+                        <div class="dots-container">
+                            <img src="three-dots.svg">
+                        </div>
+                    </div>
+            
+                    <div class="section-2">
+                        <button class="availability-btn">Available</button>
+                        <div class="product-info">
+                            <p class="product-name">Product Name</p>
+                            <p class="product-id">ID: 12345</p>
+                        </div>
+                    </div>
+            
+                    <div class="section-3">
+                        <div class="rating-reviews">
+                            <span class="rating">★★★★☆</span>
+                            <span class="reviews">100 reviews</span>
+                        </div>
+                        <div class="details-code">
+                            <span class="details">Product Details</span>
+                            <span class="code">G-05</span>
+                        </div>
+                        <div class="random-text">
+                            <span class="left-text">Random1</span>
+                            <span class="right-text">Random2</span>
+                        </div>
+                    </div>
+                </div>
+                <img src="arrow-right-circle.svg" class="side-arrow">
+            </div>
+        </div>  
+    </div>
+    <div class="middlebar-items">
+            
+        <div class="container">
+            <div class="info-section">
+                <div class="info-text">
+                    <h3>Data Information</h3>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+        
+                <nav class="mini-navbar">
+                    <ul>
+                        <li><a href="#">All</a></li>
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">Sales Info</a></li>
+                        <li><a href="#">Budget</a></li>
+                        <li><a href="#">Options</a></li>
+                    </ul>
+                </nav>
+            </div>
+        
+            <div class="table-section">
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Company</th>
+                            <th>Address</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Company A</td>
+                            <td>123 Street A</td>
+                            <td>$10,000</td>
+                            <td><button class="status-btn active">Active</button></td>
+                            <td><img src="eye.svg"></td>
+                        </tr>
+                        <tr>
+                            <td>Company B</td>
+                            <td>456 Street B</td>
+                            <td>$5,500</td>
+                            <td><button class="status-btn pending">Pending</button></td>
+                            <td><img src="eye.svg"></td>
+                        </tr>
+                        <tr>
+                            <td>Company C</td>
+                            <td>789 Street C</td>
+                            <td>$8,300</td>
+                            <td><button class="status-btn active">Active</button></td>
+                            <td><img src="eye.svg"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+    </div>
+</div>
+</div>
+</body>
+</html>
