@@ -281,6 +281,11 @@ input{
     margin: 4px 0px;
 }
 
+.random-text{
+    display: flex;
+    flex-direction: column;
+}
+
 .circle {
     height: 30px; 
     width: 30px; 
@@ -293,6 +298,7 @@ input{
     align-items: center;
     font-size: 16px;
     font-weight: bold;
+    margin-left: 15px;
 }
 .circle h4 {
     line-height: 30px;
