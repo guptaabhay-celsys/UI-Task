@@ -7,7 +7,7 @@
     <title>UI Task</title>
 </head>
 <body>
-    <div class="container">
+    <div class="outer-container">
     <div class="sidebar">
         <div class="logo-div">
             <div><img src="logo.png" alt="No Image Found" class="logo"></div>
@@ -21,41 +21,9 @@
             <h4 class="create-project">Create Project</h4>
         </div>
         <div>
-            <h4 class="sidebar-heading">Menu</h4>
-            <div class="menu-items">
-                <div class="menuItem">
-                    <img src="sidebar-icons/house-fill.svg" alt="" class="menu-icon">
-                    <h5 class="side-text">Home</h5>
-                </div>
-                <div class="menuItem">
-                    <img src="sidebar-icons/chat-left-dots-fill.svg">
-                    <h5 class="side-text">Messages</h5>
-                </div>
-                <div class="menuItem">
-                    <img src="sidebar-icons/window-desktop.svg">
-                    <h5 class="side-text">Documents</h5>
-                </div>
-                <div class="menuItem">
-                    <img src="sidebar-icons/file-earmark-bar-graph-fill.svg" alt="">
-                    <h5 class="side-text">Application</h5>
-                </div>
-            </div>
-        </div>
-        <div>
-            <h4 class="sidebar-heading">Configuration</h4>
-            <div class="configuration-items">
-                <div class="configItem">
-                    <img src="sidebar-icons/house-fill.svg" alt="" class="menu-icon">
-                    <h5 class="side-text">Stack Dev</h5>
-                </div>
-                <div class="configItem">
-                    <img src="sidebar-icons/chat-left-dots-fill.svg" alt="">
-                    <h5 class="side-text">Settings</h5>
-                </div>
-                <div class="configItem">
-                    <img src="sidebar-icons/window-desktop.svg" alt="">
-                    <h5 class="side-text">Light Mode</h5>
-                </div>
+            <h4 class="sidebar-heading">Projects</h4>
+            <div class="project-list">
+                
             </div>
         </div>
     </div>
@@ -211,18 +179,6 @@
                                 <option value="">Select By Newest</option>
                             </select>
                         </div>
-                
-                        <div class="icon-background">
-                            <img src="other-icons/list-task.svg" class="icon">
-                        </div>
-                
-                        <div>
-                            <button class="add-data">Add New Data</button>
-                        </div>
-
-                        <div>
-                            <button class="add-new-data">+</button>
-                        </div>
                     </div>
                 </div>
                 
@@ -233,9 +189,6 @@
                         <div class="image-container">
                             <img src="logo.png" alt="Product Image" class="product-img">
                         </div>
-                        <div class="dots-container">
-                            <img src="other-icons/three-dots.svg">
-                        </div>
                     </div>
 
                     <div class="section-2">
@@ -255,10 +208,7 @@
                             <span class="details">Product Details</span>
                             <span class="code">G-05</span>
                         </div>
-                        <div class="random-text">
-                            <span class="left-text">Random1</span>
-                            <span class="right-text">Random2</span>
-                        </div>
+                        
                     </div>
                 </div>
             
@@ -267,9 +217,6 @@
                         <div class="image-container">
                             <img src="logo.png" alt="Product Image" class="product-img">
                         </div>
-                        <div class="dots-container">
-                            <img src="other-icons/three-dots.svg">
-                        </div>
                     </div>
 
                     <div class="section-2">
@@ -289,10 +236,7 @@
                             <span class="details">Product Details</span>
                             <span class="code">G-05</span>
                         </div>
-                        <div class="random-text">
-                            <span class="left-text">Random1</span>
-                            <span class="right-text">Random2</span>
-                        </div>
+                        
                     </div>
                 </div>
             
@@ -301,9 +245,6 @@
                         <div class="image-container">
                             <img src="logo.png" alt="Product Image" class="product-img">
                         </div>
-                        <div class="dots-container">
-                            <img src="other-icons/three-dots.svg">
-                        </div>
                     </div>
             
                     <div class="section-2">
@@ -323,10 +264,7 @@
                             <span class="details">Product Details</span>
                             <span class="code">G-05</span>
                         </div>
-                        <div class="random-text">
-                            <span class="left-text">Random1</span>
-                            <span class="right-text">Random2</span>
-                        </div>
+                        
                     </div>
                 </div>
                 <img src="other-icons/arrow-right-circle.svg" class="side-arrow">
@@ -404,6 +342,92 @@
         
     </div>
     </div>
+</div>
+
+<div class="add-project-window project-window-hidden">
+    <button class="close-window1"><img src="other-icons/x-circle-fill.svg"></button>
+    <form class="project-form">
+        <table class="dialog-content">
+            <tr>
+                <td><label for="project-title">Project Title:</label></td>
+                <td><input type="text" placeholder="Enter Project Title" required  class="project-title"></td>
+            </tr>
+    
+            <tr>
+                <td><label for="company-name">Project Description:</label></td>
+                <td><textarea rows="4" name="project-desc" placeholder="Enter Project Description" class="project-desc" required></textarea></td>
+            </tr>
+    
+            <tr>
+                <td colspan="2"><input type="submit" class="project-submit"></input></td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+<div class="add-company-window company-window-hidden">
+    <button class="prev-dialog1"><img src="other-icons/arrow-left-circle.svg"></button>
+    <button class="close-window2"><img src="other-icons/x-circle-fill.svg"></button>
+    <form class="company-form">
+        <table class="dialog-content">
+            <tr>
+                <td><label for="company-name">Company Name:</label></td>
+                <td><input type="text" placeholder="Enter Company Name" required  class="company-name"></td>
+            </tr>
+ 
+            <tr>
+                <td><label for="company-add">Address:</label></td>
+                <td><textarea rows="2" name="company-add" placeholder="Enter Address" class="company-add" required></textarea></td>
+            </tr>
+
+            <tr>
+                <td><label for="company-pin">Pincode:</label></td>
+                <td><input type="number" placeholder="Enter Pincode" required  class="company-pin"></td>
+            </tr>
+    
+            <tr>
+                <td colspan="2"><input type="submit" class="add-prod" value="Add Product Details"></input></td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+
+<div class="add-product-window product-window-hidden">
+    <button class="prev-dialog2"><img src="other-icons/arrow-left-circle.svg"></button>
+    <button class="close-window3"><img src="other-icons/x-circle-fill.svg"></button>
+    <form action="" class="product-form">
+        <table class="dialog-content">
+            <tr>
+                <td><label for="pro-Name">Product Name:</label></td>
+                <td><input type="text" placeholder="Enter Product Title" required  class="pro-Name"></td>
+            </tr>
+    
+            <tr>
+                <td><label for="p-image">Product Image:</label></td>
+                <td><input type="file" placeholder="Enter Product Name" class="p-image"></td>
+            </tr>
+    
+            <tr>
+                <td><label for="p-id">Product ID:</label></td>
+                <td><input type="number" placeholder="Enter Product ID" required class="p-id"></td>
+            </tr>
+    
+            <tr>
+                <td><label for="p-sales">Product Sales:</label></td>
+                <td><input type="number" placeholder="Enter Product Sales" required class="p-sales"></td>
+            </tr>
+    
+            <tr>
+                <td><label for="review-count">Review Count:</label></td>
+                <td><input type="number" placeholder="Enter Review Count" required class="review-count"></td>
+            </tr>
+    
+            <tr>
+                <td colspan="2"><input type="submit" class="product-submit"></input></td>
+            </tr>
+        </table>
+    </form>
 </div>
 
 <script src="function.js"></script>

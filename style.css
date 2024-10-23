@@ -51,6 +51,7 @@ body {
     opacity: 0.5;
     border: none;
     border-radius: 2px;
+    cursor: pointer;
 }
 
 .create-project{
@@ -61,7 +62,7 @@ body {
     margin-bottom: 15px;
 }
 
-.menu-items, .configuration-items {
+.project-list, .configuration-items {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -293,11 +294,17 @@ input{
     align-items: center;
     font-size: 16px;
     font-weight: bold;
+    margin-left: 15px;
 }
 .circle h4 {
     line-height: 30px;
     font-size: 1em;
     margin: 0;
+}
+
+.random-text{
+    display: flex;
+    flex-direction: column;
 }
 
 .prod-desc h6 {
@@ -1109,3 +1116,123 @@ input{
         display: none;
     }
 }
+
+.project-window-hidden, .product-window-hidden, .company-window-hidden {
+    display: none;
+}
+
+/* Style for the dialog window */
+.add-project-window, .add-product-window, .add-company-window {
+    position: fixed; 
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    background: linear-gradient(45deg, #ff9a00, #f76345);
+    border-radius: 10px; 
+    padding: 20px;
+    width: 90%; 
+    max-width: 600px;
+    height: auto; 
+    max-height: 80%; 
+    overflow-y: auto; 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+.add-product-window td, .add-project-window td, .add-company-window td{
+    margin-bottom: 20px;
+}
+
+.add-company-window button, .add-product-window button{
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    margin-left: 16px;
+}
+
+.add-company-window img, .add-product-window img{
+    height: 25px;
+}
+
+.close-window1, .close-window2, .close-window3{
+    border: none;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    height: 15px;
+    width: 20px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.close-window1 img, .close-window2 img, .close-window3 img{
+    height: inherit;
+}
+
+.dialog-content {
+    padding: 20px; 
+}
+
+
+.dialog-content label {
+    font-weight: bold; 
+    margin-right: 10px;
+    color: rgb(100, 99, 99); 
+}
+ 
+.dialog-content input[type="text"], .dialog-content input[type="number"], .dialog-content textarea {
+    width: 100%; 
+    padding: 12px; 
+    border: 1px solid #000000; 
+    border-radius: 5px; 
+    transition: border-color 0.3s; 
+    margin-bottom: 10px;
+    color: whitesmoke;
+}
+
+.dialog-content textarea{
+    background-color: transparent;
+}
+
+.dialog-content input[type="file"]{
+    margin-bottom: 10px;
+}
+
+.dialog-content input::placeholder, .dialog-content textarea::placeholder {
+    color: rgba(211, 211, 211);
+}
+
+.dialog-content input[type="text"]:focus {
+    border-color: #4CAF50; 
+    outline: none; 
+}
+
+
+.dialog-content input[type="submit"] {
+    background-color: #4CAF50; 
+    color: white; 
+    border: none;
+    padding: 8px 10px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s; 
+}
+
+
+.dialog-content input[type="submit"]:hover {
+    background-color: #45a049;
+    transform: scale(1.05); 
+}
+
+@media (max-width: 600px) {
+    .add-project-window {
+        width: 95%; 
+    }
+}
+
