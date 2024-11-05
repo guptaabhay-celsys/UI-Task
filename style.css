@@ -1117,12 +1117,12 @@ input{
     }
 }
 
-.project-window-hidden, .product-window-hidden, .company-window-hidden {
+.project-window-hidden, .product-window-hidden, .company-window-hidden, .final-window-hidden {
     display: none;
 }
 
 /* Style for the dialog window */
-.add-project-window, .add-product-window, .add-company-window {
+.add-project-window, .add-product-window, .add-company-window, .final-window {
     position: fixed; 
     top: 50%;
     left: 50%; 
@@ -1159,7 +1159,7 @@ input{
     height: 25px;
 }
 
-.close-window1, .close-window2, .close-window3{
+.close-window1, .close-window2, .close-window3, .close-window4{
     border: none;
     position: absolute;
     right: 8px;
@@ -1170,7 +1170,7 @@ input{
     cursor: pointer;
 }
 
-.close-window1 img, .close-window2 img, .close-window3 img{
+.close-window1 img, .close-window2 img, .close-window3 img, .close-window4 img{
     height: inherit;
 }
 
@@ -1213,7 +1213,8 @@ input{
 }
 
 
-.dialog-content input[type="submit"] {
+.dialog-content input[type="submit"], .add-new-prod, .add-new-comp, .final-window .save-project-btn,
+.final-window .add-company-btn {
     background-color: #4CAF50; 
     color: white; 
     border: none;
@@ -1222,12 +1223,23 @@ input{
     cursor: pointer; 
     border-radius: 5px;
     transition: background-color 0.3s, transform 0.2s; 
+    margin-right: 20px;
 }
 
+.add-new-prod, .add-new-comp, .final-window .save-project-btn,
+.final-window .add-company-btn{
+    font-size: 13px;
+    padding: 4px 6px;
+}
 
-.dialog-content input[type="submit"]:hover {
+.dialog-content input[type="submit"]:hover, .final-window .save-project-btn:hover,
+.final-window .add-company-btn:hover {
     background-color: #45a049;
     transform: scale(1.05); 
+}
+
+.proj-submit-hidden, .comp-submit-hidden, .final-window-hidden{
+    display: none;
 }
 
 @media (max-width: 600px) {
@@ -1235,4 +1247,62 @@ input{
         width: 95%; 
     }
 }
+
+.final-window table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px; /* Space between rows */
+}
+
+.final-window td {
+    vertical-align: middle;
+    padding: 5px 10px; /* Padding around content */
+}
+
+.final-window .prev-dialog2,
+.final-window .close-window3 {
+    position: absolute;
+    top: 15px;
+    width: 30px;
+    height: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.final-window .project-name-label {
+    font-weight: bold;
+    font-size: 18px;
+    color: #555;
+}
+
+.final-window p {
+    margin: 0;
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+}
+
+.final-window .company-dropdown,
+.final-window .product-dropdown {
+    width: 100%;
+    padding: 6px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    font-size: 14px;
+}
+
+.final-window .selected-company-name {
+    font-size: 16px;
+    margin: 10px 0; /* Space below the selected company label */
+    color: #333;
+}
+
+.final-window h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
 

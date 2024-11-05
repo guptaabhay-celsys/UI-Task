@@ -175,8 +175,8 @@
                         </div>
                 
                         <div class="dropdown">
-                            <select>
-                                <option value="">Select By Newest</option>
+                            <select class="company-list">
+                                <option value="">Select Company</option>
                             </select>
                         </div>
                     </div>
@@ -359,7 +359,7 @@
             </tr>
     
             <tr>
-                <td colspan="2"><input type="submit" class="project-submit"></input></td>
+                <td><input type="submit" class="project-submit"></input></td>
             </tr>
         </table>
     </form>
@@ -386,7 +386,7 @@
             </tr>
     
             <tr>
-                <td colspan="2"><input type="submit" class="add-prod" value="Add Product Details"></input></td>
+                <td><input type="submit" class="add-prod"></input></td>
             </tr>
         </table>
     </form>
@@ -428,6 +428,34 @@
             </tr>
         </table>
     </form>
+</div>
+
+<div class="final-window final-window-hidden">
+    <button class="prev-dialog3"><img src="other-icons/arrow-left-circle.svg"></button>
+    <button class="close-window4"><img src="other-icons/x-circle-fill.svg"></button>
+    <table>
+        <tr>
+            <td><p>Project:</p></td>
+            <td><h2 class="project-name-label"></h2></td>
+            <td><button class="add-company-btn">Add Company</button></td>
+        </tr>
+
+        <tr>
+            <td colspan="3">
+                <select class="company-dropdown"></select>
+                <button class="add-product-btn" style="display: none;">Add Product</button>
+                <div class="selected-company-name"></div>
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="3"><select class="product-dropdown"></select></td>
+        </tr>
+
+        <tr>
+            <td colspan="3"><button class="save-project-btn">Save Project</button></td>
+        </tr>
+    </table>
 </div>
 
 <script src="function.js"></script>
