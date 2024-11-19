@@ -1322,9 +1322,9 @@ input{
     border: 1px solid #ccc;
     background-color: #fff;
     font-size: 14px;
-    position: relative; /* Ensures it stays within the final-window bounds */
-    overflow-y: auto; /* Allows scrolling within the dropdown */
-    max-height: 150px; /* Restricts dropdown height for smaller screens */
+    position: relative; 
+    overflow-y: auto; 
+    max-height: 150px; 
 }
 
 @media (max-width: 600px) {
@@ -1332,7 +1332,7 @@ input{
     .final-window .product-dropdown {
         width: 100%;
         font-size: 12px;
-        max-height: 120px; /* Smaller max height for mobile screens */
+        max-height: 120px; 
     }
 
     .final-window .company-dropdown option,
