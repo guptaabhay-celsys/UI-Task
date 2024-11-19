@@ -67,9 +67,7 @@ projectDialog.addEventListener('click', () => {
 
 function initializeDropdown() {
     if (projectsArray.length > 0) {
-        currentProject = projectsArray[0]; // Set the first project as the default
-
-        // Populate the company dropdown with companies from the current project
+        currentProject = projectsArray[0]; 
         updateCompanyDropdown();
     }
 }
@@ -246,7 +244,7 @@ function displayFinalWindow() {
     currentProject.companies.forEach((com) => {
         const option = document.createElement('option');
         option.textContent = com.cDetails.cName;
-        option.value = com.cDetails.cName; // Ensure value is set
+        option.value = com.cDetails.cName; 
         companyDropdown.appendChild(option);
     });
 
@@ -262,20 +260,20 @@ function displayFinalWindow() {
             (com) => com.cDetails.cName === selectedCompanyName
         );
 
-        // Clear previous products
+        // Clearing previous products
         productDropdown.innerHTML = '<option selected>Select Product</option>';
 
         if (selectedCompany) {
-            addProductBtn.style.display = 'inline-block'; // Show add product button
+            addProductBtn.style.display = 'inline-block'; 
 
             selectedCompany.products.forEach((prod) => {
                 const option = document.createElement('option');
-                option.textContent = prod.name; // Display product name
-                option.value = prod.id; // Use product id for value
+                option.textContent = prod.name; 
+                option.value = prod.id;
                 productDropdown.appendChild(option);
             });
         } else {
-            addProductBtn.style.display = 'none'; // Hide if no company is selected
+            addProductBtn.style.display = 'none'; 
         }
     };
 
@@ -286,9 +284,9 @@ function displayFinalWindow() {
         );
 
         if (selectedCompany) {
-            currentCompany = selectedCompany; // Set the current company
-            productWindow.classList.remove('product-window-hidden'); // Show product form
-            finalWindow.classList.add('final-window-hidden'); // Hide final window
+            currentCompany = selectedCompany; 
+            productWindow.classList.remove('product-window-hidden'); 
+            finalWindow.classList.add('final-window-hidden'); 
         } else {
             alert("Please select a valid company to add a product.");
         }
@@ -369,8 +367,8 @@ function resetForms() {
 }
 
 backbtn1.addEventListener('click', () => {
-    projectWindow.classList.toggle('project-window-hidden');
-    productWindow.classList.add('product-window-hidden');
+    projectWindow.classList.remove('project-window-hidden');
+    companyWindow.classList.add('company-window-hidden');
 });
 
 backbtn2.addEventListener('click', () => {
@@ -380,7 +378,7 @@ backbtn2.addEventListener('click', () => {
 
 backbtn3.addEventListener('click', () => {
     finalWindow.classList.add('final-window-hidden');
-    companyWindow.classList.remove('product-window-hidden');
+    productWindow.classList.remove('product-window-hidden');
 });
 
 closeWindow1.addEventListener('click', () => {
