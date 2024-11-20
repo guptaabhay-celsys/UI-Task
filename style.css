@@ -965,7 +965,7 @@ input{
     .middlebar {
         left: 0;
         right: 0;
-        width: 110%;
+        width: 100%;
     }
     
     .middlebar-items {
