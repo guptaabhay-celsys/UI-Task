@@ -5,28 +5,41 @@
     font-family: 'Roboto', sans-serif;
 }
 
-body {
-    background-color: white;
+body, html{
+    height: auto;
+    overflow-y: auto;
+}
+
+body i{
+    cursor: pointer;
+}
+
+.outer-container {
+    display: flex;
     height: auto;
 }
 
 /* SIDEBAR STYLING */
 .sidebar {
-    background-image: linear-gradient(45deg, #ff9a00, #ff2a00);
+    min-height: 100vh;
+    height: auto;
+    background-image: linear-gradient( 111.4deg,  rgb(249, 96, 96) 1%, rgb(244, 202, 111) 58% );
     position: fixed;
-    top: 0;
-    left: 0;
     width: 220px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 15px;
-    align-items: start;
     color: whitesmoke;
-    gap: 25px;
     padding: 10px;
+    bottom: 0;
     box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
     z-index: 2;
+}
+
+.sidebar-content{
+    height: 100%;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: start;
 }
 
 .logo {
@@ -47,11 +60,16 @@ body {
     color: gray;
     justify-content: center;
     align-items: center;
-    padding: 10px 50px;
+    padding: 20px 50px;
     opacity: 0.5;
     border: none;
     border-radius: 2px;
     cursor: pointer;
+}
+
+.new-project:hover{
+    background-color: rgb(196, 195, 194);
+    opacity: 0.6;
 }
 
 .create-project{
@@ -94,14 +112,15 @@ body {
     height: 50px;
     z-index: 2;
     box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
-    background-color: whitesmoke;
 }
 
 .nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: inherit;
+    height: 100%;
+    overflow-y: auto;
+
 }
 
 .nav img{
@@ -109,20 +128,46 @@ body {
 }
 
 
-#search{
-   border: none;
-   border-radius: 20px;
-   justify-content: space-between;
-   background-color: lightgray;
-   padding: 10px;
-   margin-left: 10px;
-   width: 30%;
+#search {
+    border: none;
+    border-radius: 20px;
+    justify-content: space-between;
+    background-color: lightgray;
+    padding: 10px;
+    margin-left: 10px;
+    width: 30%;
+}
+
+.nav-items {
+    display: flex;
+    align-items: center;
+}
+
+#search input {
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    margin-right: 10px;
+}
+
+#search input::placeholder {
+    color: rgba(158, 152, 152, 0.925);
 }
 
 .nav-items{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.nav-items i{
+    color: rgba(158, 152, 152, 0.925);
+    font-size: 14px;
+}
+
+.nav-items i:hover{
+    color: #000000;
 }
 
 input{
@@ -132,17 +177,22 @@ input{
 
 .search-icon{
     margin-right: 6px;
+    cursor: pointer;
 }
 
-#top-second-icons, #top-third-icons{
+#top-second-icons, #top-third-icons {
+    display: flex;
     justify-content: space-between;
-    width: 150px;
+    align-items: center;
+    width: auto;
     border-right: 2px solid lightgray;
-    padding: 4px;
+    padding: 4px 32px 4px 4px;
+    gap: 35px;
+    margin-right: 60px;
 }
 
 #top-second-icons{
-    padding: 5.7px;
+    padding-right: 33px;
 }
 
 .nav-items:last-child{
@@ -159,7 +209,7 @@ input{
 
 .notifications-count{
     position: absolute;
-    background-color: red;
+    background-color: rgb(255, 48, 48);
     color: white;
     border: none;
     border-radius: 50%;
@@ -177,10 +227,11 @@ input{
     height: 30px;
     width: 30px;
     border-radius: 50%;
-    margin-right: 20px;
+    margin-left: -30px;
     border: 1px solid gray;
     background-color: rgb(52, 52, 52);
-    
+    text-align: left;
+    cursor: pointer;
 }
 
 .profile-pic{
@@ -188,38 +239,43 @@ input{
     padding-right: 2px 2px 0px 0px;
 }
 
-/* RIGHT-SIDEBAR STYLING */
-
-.right-sidebar{
-    position: fixed;
-    right: 0;
-    top: 44px;
-    bottom: 0;
-    padding: 15px;
+.nav-right-part{
     display: flex;
-    flex-direction: column;
-    gap: 8px;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.right-sidebar-items{
-    flex: 2.5;
+/* RIGHT-SIDEBAR STYLING */
+
+.right-sidebar {
+    position: absolute;
+    height: 100vh; /* Set full viewport height */
+    right: 0;
+    top: 50px;
+    bottom: 10px;
     width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-right: 10px;
+}
+
+.right-sidebar-items {
+    width: 100%;
+    flex-grow: 1; /* Ensures items take the available height */
     border-radius: 15px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     background-color: whitesmoke;
     box-shadow: 2px 2px 5px #0000004d;
-    gap: 6px;
+    gap: 10px;
+    margin-top: 12px;
 }
 
-.right-sidebar-items:first-child{
-    margin-bottom: 8px;
-}
-
-.right-sidebar-items:last-child{
-    flex: 1.6;
+.right-sidebar-items:last-child {
+    flex: 1;
 }
 
 .right-sidebar-items:hover {
@@ -227,20 +283,25 @@ input{
 }
 
 .star-icon {
-    height: 20px; 
-    width: 20px; 
-    background-color: rgb(239, 121, 42); 
+    background-color: rgb(239, 142, 77); 
     border-radius: 2px; 
     text-align: center; 
-    padding: 4px; 
+    color: white;
+    padding: 6px 10px;
 }
 
 .prod-name {
-    width: 90%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center; 
-    padding: 6px;
+    align-items: center;
+    padding: 10px; 
+    font-size: 1.1em;
+}
+
+.prod-name div {
+    display: flex;
+    align-items: center;
 }
 
 .p-name {
@@ -248,75 +309,89 @@ input{
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    margin-left: 10px;
 }
 
 .prod-btn {
-    color: blue; 
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
+    color: rgb(56, 56, 255); 
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2), -2px 2px 4px rgba(0, 0, 0, 0.2);
     border: none;
-    background-color: transparent;
+    background-color: white;
     cursor: pointer;
+    border-radius: 4px;
+    padding: 5px 12px; /* Adjusted button padding */
+    font-size: 0.8em; /* Increased font size */
 }
 
 .prod-img {
     width: 100%;
-    height: 80px;
+    height: 130px; /* Increased height */
     display: flex; 
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    margin-bottom: 4px;
+    margin-bottom: 10px;
 }
 
 .prod-img img {
     max-width: 100%;
     max-height: 100%;
     border-radius: 6px;
+    padding: 0px;
+}
+
+.iphone {
+    width: 100%;
+    margin: 10px;
+    cursor: zoom-out;
 }
 
 .prod-desc {
     display: flex; 
     width: 100%;
-    height: 40px;
-    align-items: center; 
-    margin: 4px 0px;
+    height: 50px; /* Increased height */
+    align-items: start; 
+    margin: 0px 0px 22px 0px;
+    font-size: 1em;
 }
 
 .circle {
-    height: 30px; 
-    width: 30px; 
+    height: 40px; 
+    width: 60px; 
     background-color: lightyellow; 
-    border: 2px solid yellow; 
+    border: 2px solid rgb(252, 226, 180); 
     border-radius: 50%;
-    margin: 0 6px;
+    margin: 0 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bold;
-    margin-left: 15px;
 }
+
 .circle h4 {
-    line-height: 30px;
-    font-size: 1em;
+    line-height: 40px;
+    font-size: 1.2em; /* Increased font size */
     margin: 0;
 }
 
-.random-text{
+.random-text {
     display: flex;
     flex-direction: column;
+    line-height: 18px;
 }
 
 .prod-desc h6 {
     margin: 0; 
     font-weight: 600; 
-    font-size: 0.8em; 
+    font-size: 1.1em; /* Increased font size */
     color: #555;
+    padding-bottom: 6px;
 }
 
 .prod-desc p {
     margin: 0;
-    font-size: 0.7em;
+    font-size: 0.9em; /* Increased font size */
     color: #777;
 }
 
@@ -324,38 +399,45 @@ input{
 /* MIDDLEBAR STYLING */
 
 .middlebar {
-    position: fixed;
+    position: absolute;
     top: 50px;
-    right: 310px;
-    left: 210px; 
-    bottom: 0;
+    right: 300px;
+    left: 220px; 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    gap: 15px;
-    padding: 10px;
-    height: calc(100vh - 50px);
-    overflow-y: auto;
+    row-gap: 12px;
+    min-height: 100vh;
+    height: auto;
     box-sizing: border-box;
+    padding: 12px;
+    padding-right: 22px;
 }
 
 .middlebar-items {
     display: flex;
-    width: 90%;
+    width: 100%;
+    gap: 12px;
+
 }
 
 .middlebar-items:first-child {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 15px;
 }
 
 .middlebar-items:nth-child(2) {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.product-card,
+.table-container {
+    margin: 0; /* Reset individual margins for precise control */
+    padding: 10px; /* Ensure equal padding within each card */
 }
 
 .middlebar-items:last-child {
@@ -365,21 +447,21 @@ input{
 }
 
 .stats-card{
-    height: 100%;
-    width: 220px;
+    height: 110%;
+    flex: 1;
     border-radius: 6px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     background-color: white;
     box-shadow: 2px 2px 7px rgba(0,0,0,0.3);
+    padding: 5px;
 }
 
 .product-card{
     display: flex;
     flex-direction: column;
     border-radius: 10px;
-    padding: 4px;
     align-items: center;
     justify-content: space-between;
     background-color: white;
@@ -402,39 +484,48 @@ input{
 }
 
 .graph:first-child{
-    height: 26px;
+    height: 30px;
     width: 26px;
     border: 2px solid white;
     background-color: rgb(20, 195, 20);
-    padding: 5px;
+    padding:2px;
     margin: 5px;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
     border-radius: 6px;
     float: left;
+    
 }
 
-.graph img{ 
-    height: 18px;
+.graph :first-child i{ 
     display: inline-block;
-    padding: 1px;
-    margin-right: 8px;
+    padding: 2px;
+    margin-right: 6px;
 }
 
 .graph{
     display: flex;
-    gap: 4px;
+    gap: 10px;
     align-items: center;
     color: green;
+    font-size: x-large;
 }
 
-.stats p{
+.graph:nth-child(2){
+    color: red;
+}
+
+.sales{
+    margin-top: 20px;
     color: gray;
-    font-size: small;
-    margin-bottom: 3px;
+    font-size: 18px;
 }
 
-.stats h3{
-    margin: 2px;
+.revenue {
+    color: gray;
+}
+
+.stats h2{
+    margin: 6px 5px 6px 0px;
 }
 
 .stats{
@@ -450,14 +541,14 @@ input{
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 5px;
-    border-bottom: 1px solid gray;
+    padding-bottom: 5px;
+    border-bottom: 2px solid rgb(218, 218, 218);
 }
 
 .prod-info {
     flex: 1;
     text-align: left;
-    font-size: 12px;
+    font-size: 16px;
 }
 
 .prod-info p {
@@ -472,52 +563,41 @@ input{
 }
 
 .search-prod {
-    background-color: rgb(223, 221, 221);
-    padding: 3px;
-    border-radius: 8px;
+    background-color: rgb(235, 234, 234);
+    padding: 7px;
+    border-radius: 14px;
     display: flex;
     align-items: center;
+    width: 100%; 
 }
 
 .search-prod input {
+    flex-grow: 1;
     border: none;
     background: transparent;
     font-size: 12px;
-    margin-right: 5px;
+    margin-right: 8px; 
+    outline: none; 
 }
 
 .search-prod input::placeholder {
     font-size: 12px;
+    color: rgba(158, 152, 152, 0.925);
 }
 
-.search-prod img {
-    height: 12px;
+.search-prod i {
+    color: rgba(158, 152, 152, 0.925);
+    font-size: 12px; 
+    cursor: pointer;
+    margin-right: 1px;
 }
 
 .dropdown select {
     border: 1px solid rgb(183, 182, 182);
-    color: gray;
-    padding: 5px;
+    color: rgba(158, 152, 152, 0.925);
+    padding: 5.5px;
     border-radius: 4px;
-}
-
-.icon-background {
-    background-color: rgb(223, 221, 221);
-    padding: 5px;
-    border-radius: 8px;
-}
-
-.icon-background img {
-    height: 20px;
-    display: block;
-}
-
-.add-data {
-    background-color: blue;
-    color: white;
-    border: none;
-    padding: 6px;
-    border-radius: 4px;
+    font-size: 12px;
 }
 
 .prod-cards{
@@ -527,21 +607,23 @@ input{
     justify-content: center;
     background-color: white;
     padding: 4px;
+    gap: 10px;
 }
 
 .side-arrow{
     width: 30px;
-    margin: 0px 10px;
+    cursor: pointer;
 }
 
 .product-card2{
     display: flex;
     flex-direction: column;
-    width: 200px;
+    width: 260px;
     background-color: #fff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    height: 250px;
+    height: 260px;
+    gap: 5px;
 }
 
 .section-1 {
@@ -569,18 +651,8 @@ input{
     border-radius: 8px;
 }
 
-.dots-container {
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    background-color: #b3b2b2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .section-2 {
-    padding: 4px;
+    padding: 6px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -588,7 +660,7 @@ input{
 }
 
 .availability-btn {
-    padding: 3px 6px;
+    padding: 4px 8px;
     background-color: #28a745;
     color: #fff;
     border: none;
@@ -603,7 +675,8 @@ input{
 
 .product-name {
     font-weight: 700;
-    margin-bottom: 2px;
+    margin-bottom: 4px;
+    font-size: larger;
 }
 
 .product-id {
@@ -611,19 +684,20 @@ input{
 }
 
 .section-3 {
-    padding: 5px;
+    padding: 4px 6px;
     display: flex;
     flex-direction: column;
+    padding: 4px;
 }
 
 .section-3 span{
-    font-size: 12px;
+    font-size: 16px;
 }
 
 .rating-reviews, .details-code, .random-text {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 4px;
+    padding: 2px;
 }
 
 .rating {
@@ -638,8 +712,7 @@ input{
 /* Main Container */
 .container {
     width: 100%;
-    margin-top: 12px;
-    padding: 20px;
+    padding: 12px;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 2px 2px 7px rgba(0,0,0,0.3);
@@ -656,13 +729,13 @@ input{
 }
 
 .info-text h3 {
-    color: #2c3e50;
+    color: black;
     font-weight: 700;
-    margin-bottom: 10px;
 }
 
 .info-text p {
     color: #7f8c8d;
+    font-size: smaller;
 }
 
 
@@ -681,6 +754,7 @@ input{
     font-weight: 500;
     transition: background-color 0.3s;
     border-radius: 2px;
+    margin-right: 4px;
 }
 
 .mini-navbar ul li a:hover {
@@ -824,9 +898,8 @@ input{
     
     .hamburger-icon {
         position: relative;
-        top: 2px;
         left: 10px;
-        font-size: 24px;
+        font-size: 30px;
         cursor: pointer;
         margin-right: 10px;
     }
@@ -840,7 +913,7 @@ input{
         top: 50px;
         left: -220px;
         width: 220px;
-        height: calc(100vh - 50px);
+        height: 100%;
         transition: left 0.3s;
         z-index: 2;
         opacity: 0.9;
@@ -892,7 +965,7 @@ input{
     .middlebar {
         left: 0;
         right: 0;
-        width: 100%;
+        width: 110%;
     }
     
     .middlebar-items {
@@ -903,6 +976,13 @@ input{
     .stats-card {
         margin-bottom: 10px;
         width: 100%;
+    }
+
+    .graph :first-child i{ 
+        display: inline-block;
+        padding: 6px 6px 6px 15px;
+        margin-right: 6px;
+        margin-left: 10px;
     }
     
     .product-card {
@@ -973,8 +1053,8 @@ input{
     .dropdown-list {
         display: none;
         position: absolute;
-        top: 162%;
-        right: 5px;
+        top: 84%;
+        right: 15px;
         background-color: #fff;
         border: 1px solid #ddd;
         padding: 6px;
@@ -1123,11 +1203,12 @@ input{
 
 /* Style for the dialog window */
 .add-project-window, .add-product-window, .add-company-window, .final-window {
+    background-image: linear-gradient( 111.4deg,  rgb(249, 128, 128) 1%, rgb(244, 208, 130) 58% );
     position: fixed; 
     top: 50%;
     left: 50%; 
     transform: translate(-50%, -50%); 
-    background: linear-gradient(45deg, #ff9a00, #f76345);
+    background-color: #FFEEA9;
     border-radius: 10px; 
     padding: 20px;
     width: 90%; 
@@ -1182,7 +1263,7 @@ input{
 .dialog-content label {
     font-weight: bold; 
     margin-right: 10px;
-    color: rgb(100, 99, 99); 
+    color: rgb(82, 82, 82); 
 }
  
 .dialog-content input[type="text"], .dialog-content input[type="number"], .dialog-content textarea {
@@ -1192,7 +1273,7 @@ input{
     border-radius: 5px; 
     transition: border-color 0.3s; 
     margin-bottom: 10px;
-    color: whitesmoke;
+    color: rgb(67, 67, 67);
 }
 
 .dialog-content textarea{
@@ -1204,37 +1285,38 @@ input{
 }
 
 .dialog-content input::placeholder, .dialog-content textarea::placeholder {
-    color: rgba(211, 211, 211);
+    color: rgb(110, 110, 110);
 }
 
 .dialog-content input[type="text"]:focus {
-    border-color: #4CAF50; 
+    border-color: #3d3d3d; 
     outline: none; 
 }
 
 
 .dialog-content input[type="submit"], .add-new-prod, .add-new-comp, .final-window .save-project-btn,
-.final-window .add-company-btn {
-    background-color: #4CAF50; 
+.final-window .add-company-btn{
+    background-color: #574431; 
     color: white; 
     border: none;
-    padding: 8px 10px; 
+    padding: 4px 6px; 
     font-size: 16px; 
     cursor: pointer; 
     border-radius: 5px;
     transition: background-color 0.3s, transform 0.2s; 
-    margin-right: 20px;
+    margin-bottom: 0px;
 }
 
 .add-new-prod, .add-new-comp, .final-window .save-project-btn,
 .final-window .add-company-btn{
     font-size: 13px;
     padding: 4px 6px;
+    margin-left: 0;
 }
 
 .dialog-content input[type="submit"]:hover, .final-window .save-project-btn:hover,
-.final-window .add-company-btn:hover {
-    background-color: #45a049;
+.final-window .add-company-btn:hover, #add-product-button:hover {
+    background-color: #7a5029;
     transform: scale(1.05); 
 }
 
@@ -1246,6 +1328,10 @@ input{
     .add-project-window {
         width: 95%; 
     }
+}
+
+.add-company-row{
+    margin-top: 10px;
 }
 
 .final-window table {
@@ -1262,7 +1348,7 @@ input{
 .prev-dialog1, .prev-dialog2, .prev-dialog3
 {
     position: absolute;
-    top: 15px;
+    top: 10px;
     width: 30px;
     height: 30px;
     background: none;
@@ -1306,11 +1392,14 @@ input{
 }
 
 #add-product-button {
-    background-color: black;
+    background-color: #574431; 
     color: white;
-    border-radius: 2px;
+    padding: 4px 6px;   
+    border: none;
     margin-top: 8px;
     margin-left: 0;
+    border-radius: 5px;
+    font-size: 13px;
 }
 
 
@@ -1339,4 +1428,13 @@ input{
     .final-window .product-dropdown option {
         font-size: 12px;
     }
+}
+
+.side-text:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.search-icon{
+    color: gray;
 }
