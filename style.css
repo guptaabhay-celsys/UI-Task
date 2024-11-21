@@ -249,7 +249,7 @@ input{
 
 .right-sidebar {
     position: absolute;
-    height: 100vh; /* Set full viewport height */
+    height: 100vh; 
     right: 0;
     top: 65px;
     bottom: 10px;
@@ -262,7 +262,7 @@ input{
 
 .right-sidebar-items {
     width: 100%;
-    flex-grow: 1; /* Ensures items take the available height */
+    flex-grow: 1; 
     border-radius: 15px;
     display: flex;
     flex-direction: column;
@@ -320,13 +320,13 @@ input{
     background-color: white;
     cursor: pointer;
     border-radius: 4px;
-    padding: 5px 12px; /* Adjusted button padding */
-    font-size: 0.8em; /* Increased font size */
+    padding: 5px 12px; 
+    font-size: 0.8em; 
 }
 
 .prod-img {
     width: 100%;
-    height: 140px; /* Increased height */
+    height: 140px;
     display: flex; 
     justify-content: center;
     align-items: center;
@@ -350,7 +350,7 @@ input{
 .prod-desc {
     display: flex; 
     width: 100%;
-    height: 50px; /* Increased height */
+    height: 50px;
     align-items: start; 
     margin: 0px 0px 25.5px 0px;
     font-size: 1em;
@@ -372,7 +372,7 @@ input{
 
 .circle h4 {
     line-height: 40px;
-    font-size: 1.2em; /* Increased font size */
+    font-size: 1.2em; 
     margin: 0;
 }
 
@@ -385,14 +385,14 @@ input{
 .prod-desc h6 {
     margin: 0; 
     font-weight: 500; 
-    font-size: 1.1em; /* Increased font size */
+    font-size: 1.1em; 
     color: #2e2e2e;
     padding-bottom: 10px;
 }
 
 .prod-desc p {
     margin: 0;
-    font-size: 0.9em; /* Increased font size */
+    font-size: 0.9em; 
     color: #9d9d9d;
 }
 
@@ -741,7 +741,7 @@ input{
 
 .info-text h3 {
     color: black;
-    font-weight: 700;
+    font-weight: normal;
 }
 
 .info-text p {
@@ -1050,27 +1050,26 @@ input{
     }
 
       .stats h2 {
-        font-size: 32px; /* Larger title font size */
-        margin-bottom: 10px; /* Adjusted margin */
+        font-size: 32px;
+        margin-bottom: 10px;
     }
 
-    /* Graph Section - Increase icon and text size */
     .graph {
-        font-size: 26px; /* Increase font size for the graph */
-        gap: 15px; /* Increased gap between elements */
+        font-size: 26px;
+        gap: 15px;
     }
 
     .graph .graph:first-child {
-        height: 35px; /* Bigger icon size */
-        width: 50px; /* Bigger icon size */
+        height: 35px;
+        width: 50px;
     }
 
     .graph i {
-        font-size: 25px; /* Increase icon size */
+        font-size: 25px;
     }
 
     .sales, .revenue {
-        font-size: 24px; /* Increase font size for sales and revenue text */
+        font-size: 24px; 
     }
 
     .side-arrow{
@@ -1271,7 +1270,6 @@ input{
     cursor: pointer;
     margin-left: 16px;
 }
-
 .add-company-window img, .add-product-window img, .final-window img{
     height: 25px;
 }
@@ -1376,10 +1374,10 @@ input{
 .final-window .company-dropdown,
 .final-window .product-dropdown {
     width: 100%;
-    padding: 10px; /* Comfortable padding */
+    padding: 10px;
     border-radius: 5px; 
     border: 1px solid #ccc; 
-    background-color: #fff; /* White background */
+    background-color: #fff;
     font-size: 14px;
     max-height: 150px; 
     overflow-y: auto; 
@@ -1432,7 +1430,7 @@ input{
 
 .final-window .company-dropdown,
 .final-window .product-dropdown {
-    font-size: 13px; /* Slightly smaller font size */
+    font-size: 13px;
     max-height: 120px; 
 }
 
@@ -1474,17 +1472,64 @@ input{
 }
 
 @media (max-width: 600px) {
+
+    .add-project-window, .add-company-window, .add-product-window, .final-window {
+        width: 90%; 
+        padding: 20px;
+        position: fixed;
+        top: 50%; 
+        left: 50%; 
+        transform: translate(-50%, -50%); 
+        z-index: 105;
+    }
+
+    .dialog-content input[type="text"], 
+    .dialog-content input[type="number"], 
+    .dialog-content textarea, 
+    .dialog-content input[type="file"], 
+    .dialog-content select {
+        width: 100%; 
+        min-width: 150px;
+        padding: 12px; 
+        margin-bottom: 15px; 
+        box-sizing: border-box; 
+    }
+
+    .add-project-window table{
+        padding-top: 30px;
+    }    
+
+
+    .close-window1, .close-window2, .close-window3, .close-window4 {
+        right: 10px; 
+        top: 10px; 
+        z-index: 110;
+    }
+
     .final-window .company-dropdown,
     .final-window .product-dropdown {
-        width: 100%;
         font-size: 12px;
+        width: 100%;
         max-height: 120px; 
     }
 
     .final-window .company-dropdown option,
     .final-window .product-dropdown option {
         font-size: 12px;
+        padding: 8px;
+        word-wrap: break-word;
+        overflow: hidden;
     }
+}
+
+
+.side-text:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.search-icon {
+    color: gray;
 }
 
 .side-text:hover {
