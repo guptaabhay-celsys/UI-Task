@@ -77,7 +77,7 @@ body i{
 }
 
 .sidebar-heading {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .project-list, .configuration-items {
@@ -109,7 +109,7 @@ body i{
     top: 0;
     right: 0;
     left: 220px;
-    height: 50px;
+    height: 60px;
     z-index: 2;
     box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
 }
@@ -186,13 +186,13 @@ input{
     align-items: center;
     width: auto;
     border-right: 2px solid lightgray;
-    padding: 4px 32px 4px 4px;
-    gap: 35px;
-    margin-right: 60px;
+    padding: 4px 40px 4px 4px;
+    gap: 40px;
+    margin-right: 40px;
 }
 
 #top-second-icons{
-    padding-right: 33px;
+    padding-right: 42px;
 }
 
 .nav-items:last-child{
@@ -227,7 +227,7 @@ input{
     height: 30px;
     width: 30px;
     border-radius: 50%;
-    margin-left: -30px;
+    margin-left: 0px;
     border: 1px solid gray;
     background-color: rgb(52, 52, 52);
     text-align: left;
@@ -251,7 +251,7 @@ input{
     position: absolute;
     height: 100vh; /* Set full viewport height */
     right: 0;
-    top: 50px;
+    top: 65px;
     bottom: 10px;
     width: 300px;
     display: flex;
@@ -270,7 +270,7 @@ input{
     align-items: center;
     background-color: whitesmoke;
     box-shadow: 2px 2px 5px #0000004d;
-    gap: 10px;
+    gap: 12px;
     margin-top: 12px;
 }
 
@@ -310,6 +310,7 @@ input{
     white-space: nowrap;
     text-overflow: ellipsis;
     margin-left: 10px;
+    font-weight: 500;
 }
 
 .prod-btn {
@@ -325,7 +326,7 @@ input{
 
 .prod-img {
     width: 100%;
-    height: 130px; /* Increased height */
+    height: 140px; /* Increased height */
     display: flex; 
     justify-content: center;
     align-items: center;
@@ -351,7 +352,7 @@ input{
     width: 100%;
     height: 50px; /* Increased height */
     align-items: start; 
-    margin: 0px 0px 22px 0px;
+    margin: 0px 0px 25.5px 0px;
     font-size: 1em;
 }
 
@@ -383,16 +384,16 @@ input{
 
 .prod-desc h6 {
     margin: 0; 
-    font-weight: 600; 
+    font-weight: 500; 
     font-size: 1.1em; /* Increased font size */
-    color: #555;
-    padding-bottom: 6px;
+    color: #2e2e2e;
+    padding-bottom: 10px;
 }
 
 .prod-desc p {
     margin: 0;
     font-size: 0.9em; /* Increased font size */
-    color: #777;
+    color: #9d9d9d;
 }
 
 
@@ -400,7 +401,7 @@ input{
 
 .middlebar {
     position: absolute;
-    top: 50px;
+    top: 60px;
     right: 300px;
     left: 220px; 
     display: flex;
@@ -413,6 +414,7 @@ input{
     box-sizing: border-box;
     padding: 12px;
     padding-right: 22px;
+    margin: 0px 5px;
 }
 
 .middlebar-items {
@@ -432,12 +434,13 @@ input{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-bottom: 5px;
 }
 
 .product-card,
 .table-container {
-    margin: 0; /* Reset individual margins for precise control */
-    padding: 10px; /* Ensure equal padding within each card */
+    margin: 0; 
+    padding: 10px;
 }
 
 .middlebar-items:last-child {
@@ -447,7 +450,10 @@ input{
 }
 
 .stats-card{
-    height: 110%;
+    height: auto;
+    /* width: 250px;  */
+    width: auto;
+    aspect-ratio: 4 / 3; 
     flex: 1;
     border-radius: 6px;
     display: flex;
@@ -455,7 +461,12 @@ input{
     justify-content: space-between;
     background-color: white;
     box-shadow: 2px 2px 7px rgba(0,0,0,0.3);
-    padding: 5px;
+    padding: 15px;
+    margin: 5px 5px 5px 0px;
+}
+
+.stats-card:last-child{
+    margin-right: 0px;
 }
 
 .product-card{
@@ -517,15 +528,18 @@ input{
 .sales{
     margin-top: 20px;
     color: gray;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .revenue {
     color: gray;
+    font-size: 14px;
 }
 
 .stats h2{
     margin: 6px 5px 6px 0px;
+    font-weight: 400;
+    font-size: 24px;
 }
 
 .stats{
@@ -622,7 +636,7 @@ input{
     background-color: #fff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    height: 260px;
+    height: 375px;
     gap: 5px;
 }
 
@@ -644,6 +658,7 @@ input{
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 10px;
 }
 
 .image-container img {
@@ -652,10 +667,10 @@ input{
 }
 
 .section-2 {
-    padding: 6px;
+    padding: 12px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     border-bottom: 1px solid #eee;
 }
 
@@ -664,18 +679,14 @@ input{
     background-color: #28a745;
     color: #fff;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
-    margin-bottom: 5px;
-}
-
-.product-info {
-    text-align: center;
+    margin-bottom: 8px;
 }
 
 .product-name {
-    font-weight: 700;
-    margin-bottom: 4px;
+    font-weight: 500;
+    margin-bottom: 8px;
     font-size: larger;
 }
 
@@ -684,14 +695,13 @@ input{
 }
 
 .section-3 {
-    padding: 4px 6px;
+    padding: 12px 6px;
     display: flex;
     flex-direction: column;
-    padding: 4px;
 }
 
 .section-3 span{
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .rating-reviews, .details-code, .random-text {
@@ -706,13 +716,14 @@ input{
 }
 
 .reviews, .code, .right-text {
-    color: #666;
+    color: #9d9d9d;
+    margin-bottom: 18px;
 }
 
 /* Main Container */
 .container {
     width: 100%;
-    padding: 12px;
+    padding: 10px;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 2px 2px 7px rgba(0,0,0,0.3);
@@ -749,7 +760,7 @@ input{
     text-decoration: none;
     display: inline-block;
     padding: 5px 8px;
-    background-color: #3498db;
+    background-color: #7b7b7b;
     color: #fff;
     font-weight: 500;
     transition: background-color 0.3s;
@@ -759,7 +770,7 @@ input{
 
 .mini-navbar ul li a:hover {
     background-color: #fff;
-    color: #3498db;
+    color: #7b7b7b;
 }
 
 .table-section {
@@ -776,10 +787,10 @@ input{
 }
 
 .styled-table thead tr {
-    background-color: #3498db;
+    background-color: #7b7b7b;
     color: #ffffff;
     text-align: left;
-    font-weight: bold;
+    font-weight: 200;
 }
 
 .styled-table th, .styled-table td {
@@ -801,7 +812,7 @@ input{
     padding: 5px 10px;
     border: none;
     border-radius: 5px;
-    font-weight: bold;
+    font-weight: 400;
     cursor: pointer;
 }
 
@@ -866,22 +877,24 @@ input{
         display: none;
     }
     #top-third-icons {
+        margin-left: 30px;
         width: 20%;
         border: none;
         padding: 0;
         margin-bottom: 0;
+        gap: 10px;
     }
 
     #window{
         display: none;
     }
 
-    #top-third-icons img{
-        margin: 6px;
+    #top-third-icons i{
+        margin: 4px;
     }
     
     .profile-picture {
-        width: 20%;
+        width: 10%;
         border: none;
         padding: 0;
         margin-bottom: 0;
@@ -893,19 +906,20 @@ input{
     }
     
     .nav-items:last-child {
-        margin-right: 0;
+        margin-left: -30px;
     }
     
     .hamburger-icon {
         position: relative;
+        top: 2px;
         left: 10px;
-        font-size: 30px;
+        font-size: 24px;
         cursor: pointer;
         margin-right: 10px;
     }
     
     .hamburger-icon:hover {
-        color: #3498db;
+        color: #80878b;
     }
     
     /* Left Sidebar */
@@ -913,7 +927,7 @@ input{
         top: 50px;
         left: -220px;
         width: 220px;
-        height: 100%;
+        height: calc(100vh - 50px);
         transition: left 0.3s;
         z-index: 2;
         opacity: 0.9;
@@ -977,13 +991,6 @@ input{
         margin-bottom: 10px;
         width: 100%;
     }
-
-    .graph :first-child i{ 
-        display: inline-block;
-        padding: 6px 6px 6px 15px;
-        margin-right: 6px;
-        margin-left: 10px;
-    }
     
     .product-card {
         margin-bottom: 10px;
@@ -1021,6 +1028,14 @@ input{
         margin-bottom: 10px;
         width: 100%;
     }
+
+    .graph :first-child i{ 
+        display: inline-block;
+        padding: 6px 6px 6px 15px;
+        margin-right: -3px;
+        margin-left: 105px;
+    }
+    
     
     .stats-card .graph {
         display: flex;
@@ -1032,6 +1047,30 @@ input{
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+
+      .stats h2 {
+        font-size: 32px; /* Larger title font size */
+        margin-bottom: 10px; /* Adjusted margin */
+    }
+
+    /* Graph Section - Increase icon and text size */
+    .graph {
+        font-size: 26px; /* Increase font size for the graph */
+        gap: 15px; /* Increased gap between elements */
+    }
+
+    .graph .graph:first-child {
+        height: 35px; /* Bigger icon size */
+        width: 50px; /* Bigger icon size */
+    }
+
+    .graph i {
+        font-size: 25px; /* Increase icon size */
+    }
+
+    .sales, .revenue {
+        font-size: 24px; /* Increase font size for sales and revenue text */
     }
 
     .side-arrow{
@@ -1053,8 +1092,8 @@ input{
     .dropdown-list {
         display: none;
         position: absolute;
-        top: 84%;
-        right: 15px;
+        top: 87%;
+        right: 4px;
         background-color: #fff;
         border: 1px solid #ddd;
         padding: 6px;
@@ -1078,16 +1117,16 @@ input{
     }
 
     .dropdown-list a {
-        color: #3498db;
+        color: #4767e6;
         text-decoration: none;
     }
 
     .info-text h3, .prod-info h3{
-        font-size: 19px;
+        font-size: 18px;
     }
 
     .info-text p, .prod-info p{
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .dropdown{
@@ -1106,11 +1145,14 @@ input{
         border-radius: 15px;
     }
 
+    .search-prod input{
+        width: 50px;
+    }
+
     .search-prod input::placeholder{
         font-size: 12px;
     }
     .search-icon{
-        margin-left: -75px;
         padding: 1px;
     }
 
@@ -1132,6 +1174,8 @@ input{
     }
 
 }
+
+
 
 @media only screen and (max-width: 480px) {
     /* Navbar */
@@ -1185,13 +1229,6 @@ input{
         font-size: 14px;
     }
 
-    .earmark{
-        padding-left: 12px;
-        margin-left: 62px;
-        margin-right: -4px;
-        margin-top: 3px;
-    }
-
     .mini-navbar{
         display: none;
     }
@@ -1203,16 +1240,15 @@ input{
 
 /* Style for the dialog window */
 .add-project-window, .add-product-window, .add-company-window, .final-window {
-    background-image: linear-gradient( 111.4deg,  rgb(249, 128, 128) 1%, rgb(244, 208, 130) 58% );
     position: fixed; 
     top: 50%;
     left: 50%; 
     transform: translate(-50%, -50%); 
-    background-color: #FFEEA9;
+    background-color: whitesmoke;
     border-radius: 10px; 
-    padding: 20px;
-    width: 90%; 
-    max-width: 600px;
+    padding: 40px;
+    width: 80%; 
+    max-width: 550px;
     height: auto; 
     max-height: 80%; 
     overflow-y: auto; 
@@ -1245,7 +1281,7 @@ input{
     position: absolute;
     right: 8px;
     top: 8px;
-    height: 15px;
+    height: 20px;
     width: 20px;
     background-color: transparent;
     cursor: pointer;
@@ -1256,39 +1292,52 @@ input{
 }
 
 .dialog-content {
-    padding: 20px; 
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border-collapse: collapse;
+    width: 100%;
 }
 
 
 .dialog-content label {
     font-weight: bold; 
     margin-right: 10px;
-    color: rgb(82, 82, 82); 
+    color: #555; 
+    font-size: larger;
 }
  
-.dialog-content input[type="text"], .dialog-content input[type="number"], .dialog-content textarea {
-    width: 100%; 
-    padding: 12px; 
-    border: 1px solid #000000; 
+.dialog-content input[type="text"], .dialog-content input[type="number"], .dialog-content textarea, .dialog-content input[type="file"],
+.dialog-content select  {
+    min-width: 300px;
+    padding: 15px;
+    margin-right: 10px; 
+    border: 1px solid #ccc; 
     border-radius: 5px; 
     transition: border-color 0.3s; 
     margin-bottom: 10px;
-    color: rgb(67, 67, 67);
+    background-color: white;
+    color: #333;
+    box-sizing: border-box;
+    font-size: 14px;
 }
 
 .dialog-content textarea{
-    background-color: transparent;
+    resize: vertical;
 }
 
 .dialog-content input[type="file"]{
     margin-bottom: 10px;
+    color: #aaa;
 }
 
 .dialog-content input::placeholder, .dialog-content textarea::placeholder {
-    color: rgb(110, 110, 110);
+    color: #aaa;
 }
 
-.dialog-content input[type="text"]:focus {
+.dialog-content input:focus,
+.dialog-content textarea:focus,
+.dialog-content select:focus  {
     border-color: #3d3d3d; 
     outline: none; 
 }
@@ -1296,33 +1345,46 @@ input{
 
 .dialog-content input[type="submit"], .add-new-prod, .add-new-comp, .final-window .save-project-btn,
 .final-window .add-company-btn{
-    background-color: #574431; 
+    background-color: #7e91db; 
     color: white; 
     border: none;
-    padding: 4px 6px; 
+    padding: 10px 20px; 
     font-size: 16px; 
     cursor: pointer; 
     border-radius: 5px;
     transition: background-color 0.3s, transform 0.2s; 
-    margin-bottom: 0px;
 }
 
 .add-new-prod, .add-new-comp, .final-window .save-project-btn,
 .final-window .add-company-btn{
     font-size: 13px;
-    padding: 4px 6px;
+    padding: 8px 12px;
     margin-left: 0;
+    margin-bottom: 0px;
 }
 
 .dialog-content input[type="submit"]:hover, .final-window .save-project-btn:hover,
 .final-window .add-company-btn:hover, #add-product-button:hover {
-    background-color: #7a5029;
+    background-color: #5973db;
     transform: scale(1.05); 
 }
 
 .proj-submit-hidden, .comp-submit-hidden, .final-window-hidden{
     display: none;
 }
+
+.final-window .company-dropdown,
+.final-window .product-dropdown {
+    width: 100%;
+    padding: 10px; /* Comfortable padding */
+    border-radius: 5px; 
+    border: 1px solid #ccc; 
+    background-color: #fff; /* White background */
+    font-size: 14px;
+    max-height: 150px; 
+    overflow-y: auto; 
+}
+
 
 @media (max-width: 600px) {
     .add-project-window {
@@ -1347,10 +1409,9 @@ input{
 
 .prev-dialog1, .prev-dialog2, .prev-dialog3
 {
-    position: absolute;
     top: 10px;
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     background: none;
     border: none;
     cursor: pointer;
@@ -1359,7 +1420,7 @@ input{
 .final-window .project-name-label {
     font-weight: bold;
     font-size: 18px;
-    color: #555;
+    color: #a7a7a7;
 }
 
 .final-window p {
@@ -1371,18 +1432,14 @@ input{
 
 .final-window .company-dropdown,
 .final-window .product-dropdown {
-    width: 100%;
-    padding: 6px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    background-color: #fff;
-    font-size: 14px;
+    font-size: 13px; /* Slightly smaller font size */
+    max-height: 120px; 
 }
 
 .final-window .selected-company-name {
     font-size: 16px;
     margin: 10px 0;
-    color: #333;
+    color: #999999;
 }
 
 .final-window h2 {
@@ -1392,9 +1449,9 @@ input{
 }
 
 #add-product-button {
-    background-color: #574431; 
+    background-color: #7e91db; 
     color: white;
-    padding: 4px 6px;   
+    padding: 8px 12px;   
     border: none;
     margin-top: 8px;
     margin-left: 0;

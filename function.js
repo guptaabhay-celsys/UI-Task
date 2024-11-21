@@ -366,6 +366,7 @@ function resetForms() {
     projectsArray.length = 0;
 }
 
+
 backbtn1.addEventListener('click', () => {
     projectWindow.classList.remove('project-window-hidden');
     companyWindow.classList.add('company-window-hidden');
