@@ -2,12 +2,20 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
 }
 
-body, html{
+/* body, html{
+    font-family: 'Roboto', sans-serif;
     height: auto;
     overflow-y: auto;
+} */
+
+body {
+    font-family: 'Roboto', sans-serif; /* Consistent font */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
 body i{
@@ -23,10 +31,10 @@ body i{
 .sidebar {
     min-height: 100vh;
     height: auto;
-    background-image: linear-gradient( 111.4deg,  rgb(249, 96, 96) 1%, rgb(244, 202, 111) 58% );
+    background-color: rgb(209, 210, 243);
     position: fixed;
     width: 220px;
-    color: whitesmoke;
+    color: rgb(74, 74, 74);
     padding: 10px;
     bottom: 0;
     box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
@@ -65,10 +73,12 @@ body i{
     border: none;
     border-radius: 2px;
     cursor: pointer;
+    font-size: 20px;
 }
 
 .new-project:hover{
-    background-color: rgb(196, 195, 194);
+    background-color: rgb(107, 107, 145);
+    color: white;
     opacity: 0.6;
 }
 
@@ -98,7 +108,8 @@ body i{
 }
 
 .side-text {
-    color: lightgray;
+    color: rgb(62, 62, 62);
+    font-size: 18px;
 }
 
 /* NAVBAR STYLING */
@@ -249,11 +260,12 @@ input{
 
 .right-sidebar {
     position: absolute;
-    height: 100vh; 
+    height: auto; 
+    max-width: 380px;
     right: 0;
     top: 65px;
     bottom: 10px;
-    width: 300px;
+    width: auto;
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -271,7 +283,14 @@ input{
     background-color: whitesmoke;
     box-shadow: 2px 2px 5px #0000004d;
     gap: 12px;
+    flex-wrap: wrap;
     margin-top: 12px;
+}
+
+@media only screen and (max-width: 830px) {
+    .right-sidebar {
+        display: none;
+    }
 }
 
 .right-sidebar-items:last-child {
@@ -314,18 +333,18 @@ input{
 }
 
 .prod-btn {
-    color: rgb(56, 56, 255); 
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2), -2px 2px 4px rgba(0, 0, 0, 0.2);
+    background-color: #7e91db; 
+    color: white; 
     border: none;
-    background-color: white;
-    cursor: pointer;
-    border-radius: 4px;
-    padding: 5px 12px; 
-    font-size: 0.8em; 
+    padding: 6px 20px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s; 
 }
 
 .prod-img {
-    width: 100%;
+    width: 90%;
     height: 140px;
     display: flex; 
     justify-content: center;
@@ -402,8 +421,8 @@ input{
 .middlebar {
     position: absolute;
     top: 60px;
-    right: 300px;
-    left: 220px; 
+    right: 380px;
+    left: 220px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -415,6 +434,7 @@ input{
     padding: 12px;
     padding-right: 22px;
     margin: 0px 5px;
+    display: flex;
 }
 
 .middlebar-items {
@@ -428,6 +448,7 @@ input{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .middlebar-items:nth-child(2) {
@@ -451,10 +472,7 @@ input{
 
 .stats-card{
     height: auto;
-    /* width: 250px;  */
-    width: auto;
-    aspect-ratio: 4 / 3; 
-    flex: 1;
+    flex: 1;  
     border-radius: 6px;
     display: flex;
     flex-direction: column;
@@ -554,15 +572,21 @@ input{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap; /* Allows wrapping when screen size decreases */
     width: 100%;
     padding-bottom: 5px;
     border-bottom: 2px solid rgb(218, 218, 218);
+    gap: 10px;
 }
 
 .prod-info {
     flex: 1;
     text-align: left;
     font-size: 16px;
+}
+
+.prod-info h3{
+    font-weight: normal;
 }
 
 .prod-info p {
@@ -573,7 +597,9 @@ input{
 .add-prod {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
+    flex: 1;
+    max-width: 600px;
 }
 
 .search-prod {
@@ -582,7 +608,8 @@ input{
     border-radius: 14px;
     display: flex;
     align-items: center;
-    width: 100%; 
+    flex-grow: 2; /* Allows the search bar to expand more */
+    min-width: 150px;
 }
 
 .search-prod input {
@@ -591,7 +618,7 @@ input{
     background: transparent;
     font-size: 12px;
     margin-right: 8px; 
-    outline: none; 
+    outline: none;
 }
 
 .search-prod input::placeholder {
@@ -606,6 +633,10 @@ input{
     margin-right: 1px;
 }
 
+.dropdown{
+        flex-shrink: 1; /* Allows dropdown to shrink */
+    }
+
 .dropdown select {
     border: 1px solid rgb(183, 182, 182);
     color: rgba(158, 152, 152, 0.925);
@@ -616,12 +647,12 @@ input{
 
 .prod-cards{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
-    align-content: center;
-    justify-content: center;
-    background-color: white;
+    gap: 20px;
     padding: 4px;
-    gap: 10px;
+    box-sizing: border-box;
 }
 
 .side-arrow{
@@ -632,12 +663,15 @@ input{
 .product-card2{
     display: flex;
     flex-direction: column;
-    width: 260px;
+    flex: 1 1 300px; /* Flexible width with a minimum of 300px */
+    max-width: 100%; 
     background-color: #fff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     height: 375px;
     gap: 5px;
+    border-right: 1px solid rgb(225, 225, 225);
+    border-radius: 4px;
 }
 
 .section-1 {
@@ -756,6 +790,22 @@ input{
     font-size: 12px;
      }
 
+@media only screen  and (max-width: 1050px) {
+    .mini-navbar ul {
+        display: flex;
+        flex-direction: column;
+        padding: 8px 5px;
+        gap: 5px;
+    }
+    
+}
+
+@media only screen and (max-width: 840px){
+    .mini-navbar{
+        display: none;
+    }
+}
+
 .mini-navbar ul li a {
     text-decoration: none;
     display: inline-block;
@@ -777,7 +827,9 @@ input{
     margin-top: 10px;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: auto;
 }
+
 
 .styled-table {
     width: 100%;
@@ -830,7 +882,7 @@ input{
     display: none;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 830px) {
 
     .hamburger-icon{
         display: inline-block;
@@ -1025,8 +1077,7 @@ input{
     }
     
     .stats-card {
-        margin-bottom: 10px;
-        width: 100%;
+        margin-bottom: 10px;       
     }
 
     .graph :first-child i{ 
@@ -1317,7 +1368,7 @@ input{
     background-color: white;
     color: #333;
     box-sizing: border-box;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .dialog-content textarea{
@@ -1329,8 +1380,15 @@ input{
     color: #aaa;
 }
 
+.dialog-content input[type="file"]{
+    letter-spacing: 1px;
+    font-family: 'Roboto';
+}
+
 .dialog-content input::placeholder, .dialog-content textarea::placeholder {
     color: #aaa;
+    font-family: 'Roboto';
+    letter-spacing: 1px;
 }
 
 .dialog-content input:focus,
@@ -1353,12 +1411,25 @@ input{
     transition: background-color 0.3s, transform 0.2s; 
 }
 
+.dialog-content input[type="submit"]{
+float: right;
+margin: 10px 10px 5px 0px;
+}
+
 .add-new-prod, .add-new-comp, .final-window .save-project-btn,
 .final-window .add-company-btn{
     font-size: 13px;
     padding: 8px 12px;
     margin-left: 0;
     margin-bottom: 0px;
+}
+
+.save-project-btn, .add-product-btn {
+    float: right;
+}
+
+.save-project-btn{
+    margin-top: -10px;
 }
 
 .dialog-content input[type="submit"]:hover, .final-window .save-project-btn:hover,
