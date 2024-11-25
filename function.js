@@ -93,23 +93,22 @@ function displayProjectCard(projects) {
         const projectItem = document.createElement('div');
         projectItem.classList.add('menuItem');
         projectItem.setAttribute('id', proj.id);
-
+    
         projectItem.innerHTML = 
             `<img src="sidebar-icons/window-desktop.svg" alt="" class="menu-icon">
-            <h5 class="side-text">${proj.title}</h5>`
+            <h5 class="side-text">${proj.title}</h5>`;
         
-
         projectList.appendChild(projectItem);
-
+    
         projectItem.addEventListener('click', () => {
+            document.querySelectorAll('.menuItem').forEach(item => item.classList.remove('selected'));
+            projectItem.classList.add('selected');
             currentProject = proj;
             updateCompanyDropdown();
-            console.log(`Selected project: ${currentProject.title}`);
         });
     });
+    
 }
-
-
 
 projectForm.addEventListener('submit', (e) => {
     e.preventDefault();
